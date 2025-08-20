@@ -29,24 +29,24 @@ select * from employee;
 -- first assignment:
 /*display all records from the employee table*/
 select * from employee;
-/* display only empname and salary of all employees*/
+/* display only empname and salary of all employee*/
 select empname,salary from employee;
-/*find all employees who belong to it department*/
-SELECT * from employee JOIN department ON employees.deptid = department.deptid WHERE departments.deptname = 'it';
-/*list employees whose salary greater than 50000*/
+/*find all employee who belong to it department*/
+SELECT * from employee JOIN department ON employee.deptid = department.deptid WHERE department.deptname = 'it';
+/*list employee whose salary greater than 50000*/
 select * from employee where salary>50000;
-/*find employees hired before 2020-01-01*/
+/*find employee hired before 2020-01-01*/
 select * from employee where hiredate < '2020-01-01';
-/* display employees in desc order of salary*/
+/* display employee in desc order of salary*/
 select * from employee order by salary desc;
-/* counnt total number of employees*/
+/* counnt total number of employee*/
 select count(*) from employee;
-/* find average salary from employees*/
+/* find average salary from employee*/
 select avg(salary) from employee;
 /* find the maximum salary in each department*/
-SELECT deptname,max(salary) from employee JOIN departments ON employees.deptid = departments.deptid  group by deptname ;
-/*find departments having more than 1 employee*/
-SELECT deptname from employees JOIN department ON employees.deptid = departments.deptid  group by deptname having count(employees.empname)>1;
+SELECT deptname,max(salary) from employee JOIN department ON employee.deptid = department.deptid  group by deptname ;
+/*find department having more than 1 employee*/
+SELECT deptname from employee JOIN department ON employee.deptid = department.deptid  group by deptname having count(employee.empname)>1;
 
 
 
