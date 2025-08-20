@@ -16,7 +16,7 @@ CREATE TABLE employee (
     deptid INT,
     salary INT,
     hiredate DATE,
-    FOREIGN KEY (deptid) REFERENCES departments(deptid)
+    FOREIGN KEY (deptid) REFERENCES department(deptid)
 );
 -- insert values into employee
 INSERT INTO employee
